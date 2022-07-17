@@ -1,5 +1,6 @@
 .app
 {
-    /* display: flex; */
+    display: flex;
     background-color: #18222d;
+    color: white;
 }

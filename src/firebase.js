@@ -1,4 +1,3 @@
-import { dblClick } from '@testing-library/user-event/dist/types/convenience';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';

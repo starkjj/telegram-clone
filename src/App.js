@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Telegram from './components/Telegram';
-import Sidebar from './components/Sidebar';
 import {auth} from './firebase';
 import {useSelector, useDispatch} from 'react-redux';
 import { selectUser, login, logout } from './features/counter/userSlice';
@@ -12,9 +11,10 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-    auth.onAuthStateChange((authUser) => {
+    auth.onAuthStateChanged((authUser) => {
         if(authUser)
         {
+            //login
             dispatch(
                 login
                 ({
@@ -35,5 +35,13 @@ function App() {
         </div>
     );
 }
+
+// const App = () => {
+//   return (
+//     <div className='app'>
+//         <Telegram/>
+//     </div>
+//   )
+// }
 
 export default App;
