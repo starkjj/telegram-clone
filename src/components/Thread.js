@@ -1,5 +1,5 @@
 import { Avatar, IconButton } from '@material-ui/core'
-import { MoreHoriz } from '@material-ui/icons'
+import { MicNone, MoreHoriz, SendRounded, Timer } from '@material-ui/icons'
 import React, { useState } from 'react'
 import './Thread.css'
 
@@ -13,8 +13,6 @@ const Thread = () => {
         setInput('');
 
     }
-
-    console.log(input);
 
   return (
     <div className='thread'>
@@ -32,8 +30,18 @@ const Thread = () => {
         </div>
         <div className='thread__messages'></div>
         <div className='thread__input'>
-            <input placeholder='Write a message...' type='text' value={input} onChange={(e) => setInput(e.target.value)}></input>
-            <button onClick={sendMessage}>Send</button>
+            <form>
+                <input placeholder='Write a message...' type='text' value={input} onChange={(e) => setInput(e.target.value)}></input>
+                <IconButton>
+                    <Timer/>
+                </IconButton>
+                <IconButton onClick={sendMessage}>
+                    <SendRounded/>
+                </IconButton>
+                <IconButton>
+                    <MicNone/>
+                </IconButton>
+            </form>
         </div>
     </div>
   )
