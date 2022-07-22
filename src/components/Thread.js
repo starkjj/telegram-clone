@@ -5,7 +5,7 @@ import './Thread.css';
 import db from '../firebase';
 import firebase from 'firebase/compat/app';
 import { useSelector } from 'react-redux';
-import { selectThreadId, selectThreadName } from '../features/threadSlice';
+import threadSlice, { selectThreadId, selectThreadName } from '../features/threadSlice';
 import { selectUser } from '../features/counter/userSlice';
 import Message from './Message';
 
@@ -56,10 +56,10 @@ const Thread = () => {
     <div className='thread'>
         <div className='thread__header'>
             <div className='thread__header__contents'>
-                <Avatar />
+                <Avatar src={messages[0].data.photo}/>
                 <div className='thread__header__contents__info'>
                     <h4>{threadName}</h4>
-                    <h5>Time Stamp</h5>
+                    <h5>{messages[0].data.timestamp.toDate().toLocaleString()}</h5>
                 </div>
             </div>
             <IconButton>

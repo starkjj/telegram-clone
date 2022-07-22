@@ -25,6 +25,12 @@
     justify-content: center;
     color: white;
     padding: 10px;
+    
+}
+
+.thread__header__contents__info
+{
+    margin-left: 15px;
 }
 
 .thread__header__contents__info > h5
@@ -36,6 +42,7 @@
 .thread__header__details
 {
     color: white;
+    margin-left: 15px;
 }
 
 .thread__header__details:hover
