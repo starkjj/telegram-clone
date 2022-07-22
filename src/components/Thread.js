@@ -6,7 +6,7 @@ import db from '../firebase';
 import firebase from 'firebase/compat/app';
 import { useSelector } from 'react-redux';
 import { selectThreadId, selectThreadName } from '../features/threadSlice';
-import { selectUser } from '../features/userSlice';
+import { selectUser } from '../features/counter/userSlice';
 import Message from './Message';
 
 const Thread = () => {
