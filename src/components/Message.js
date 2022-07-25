@@ -13,7 +13,7 @@ const Message = ({id, data: { timestamp, displayName, email, message, photo, uid
                 <Avatar src={photo} className='message__photo'/>
                 <div className='message__contents'>
                     <p>{message}</p>
-                    <small>{timestamp?.toDate().toLocaleString()}</small>
+                    <small>{timestamp?.toDate()?.toLocaleTimeString()}</small>
                 </div>
             </div>
     )
