@@ -56,10 +56,10 @@ const Thread = () => {
     <div className='thread'>
         <div className='thread__header'>
             <div className='thread__header__contents'>
-                <Avatar src={messages[0].data.photo}/>
+                <Avatar src={messages[0]?.data?.photo}/>
                 <div className='thread__header__contents__info'>
                     <h4>{threadName}</h4>
-                    <h5>{messages[0].data.timestamp.toDate().toLocaleString()}</h5>
+                    <h5>{messages[0]?.data?.timestamp.toDate().toLocaleString()}</h5>
                 </div>
             </div>
             <IconButton>
